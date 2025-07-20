@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "MiniVault API",
+    "version": "v1"
+  },
+  "paths": {
+    "/generate": {
+      "post": {
+        "tags": [
+          "MiniVaultApi"
+        ],
+        "operationId": "Generate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/generate/stream": {
+      "post": {
+        "tags": [
+          "MiniVaultApi"
+        ],
+        "operationId": "GenerateStream",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "MiniVaultApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GenerateRequest": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

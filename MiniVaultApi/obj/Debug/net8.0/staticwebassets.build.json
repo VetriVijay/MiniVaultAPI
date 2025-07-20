@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lrEfaZkcCWzWQlHNH7lJctlXAeiJZ3uTFzJwlCqM3bM=",
+  "Source": "MiniVaultApi",
+  "BasePath": "_content/MiniVaultApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
